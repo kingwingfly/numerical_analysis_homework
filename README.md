@@ -2,6 +2,18 @@
 
 采用Rust语言。画图使用[`plotters`](https://docs.rs/plotters/0.3.7/plotters/)，数值分析采用[`peroxide`](https://axect.github.io/Peroxide_Doc/peroxide/index.html)。
 
+## 运行
+
+安装[Rust](https://rust-lang.org/)。
+
+```sh
+cargo run
+```
+
+即可。
+
+
+
 # 实验2.1 多项式插值振荡现象
 
 ## 分析
