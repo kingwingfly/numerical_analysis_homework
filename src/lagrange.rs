@@ -37,7 +37,7 @@ where
     }
 
     let ns = ns.into_iter().collect::<Vec<_>>();
-    let len = ns.len();
+    let max = ns.iter().copied().max().unwrap_or_default();
     let mut lagrange_xys = vec![];
     for &n in ns.iter() {
         let mut xs = vec![];
@@ -77,7 +77,7 @@ where
         .label("target")
         .legend(|(x, y)| PathElement::new(vec![(x, y), (x + 20, y)], RED));
     for (n, xys) in ns.into_iter().zip(lagrange_xys) {
-        let color = RGBColor(0, 255 - (n as f64 / len as f64 * 255.) as u8, 0);
+        let color = RGBColor(0, 255 - (n as f64 / max as f64 * 255.) as u8, 0);
         chart
             .draw_series(LineSeries::new(xys, &color))?
             .label(format!("{n}"))
