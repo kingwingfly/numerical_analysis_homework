@@ -3,6 +3,7 @@ name = "numerical_analysis"
 version = "0.1.0"
 edition = "2024"
 authors = ["王翼翔 <836250617@qq.com>"]
+repository = "https://github.com/kingwingfly/numerical_analysis_homework"
 
 [dependencies]
 plotters = { version = "0.3", default-features = false, features = ["svg_backend", "line_series"] }
